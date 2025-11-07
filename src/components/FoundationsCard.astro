@@ -1,13 +1,18 @@
 ---
+import { getCollection } from 'astro:content';
+
+const allFoundations = await getCollection('foundations');
 ---
 
-<details>
-  <summary>{##TITLE##}</summary>
-  <p>{##DESCRIPTION##}</p>
-  <a href={`/foundations/${##SLUG##}`}>
-    Find out how we put this in practice
-  </a>
-</details>
+{allFoundations.map((f) => (
+    <details>
+      <summary>{f.data.title}</summary>
+      <p>{f.data.description}</p>
+      <a href={`/foundations/${f.slug}`}>
+        Find out how we put this in practice
+      </a>
+    </details>
+))}
 
 <style>
   details {
@@ -44,7 +49,7 @@
 
   summary::after {
     content: "";
-    background-image: url(../assets/plus.svg);
+    background-image: url(/images/plus.svg);
     width: 2rem;
     height: 2rem;
     margin-left: auto;
@@ -61,6 +66,6 @@
   }
 
   details[open]summary::after {
-    background-image: url(../assets/min.svg);
+    background-image: url(/images/min.svg);
   }
 </style>

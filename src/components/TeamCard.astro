@@ -1,11 +1,11 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
 <article>
   <div class="picwrap">
     <div class="profilepic">
-      <img
+      <Image
         alt=""
         src={##PIC##}
         width={300}
@@ -14,7 +14,7 @@
       />
     </div>
   </div>
-  <p class="name"><a href={`/team/${##ID##}`}>{##NAME##}</a></p>
+  <p class="name"><a href={`/team/${##SLUG##}`}>{##NAME##}</a></p>
   <p class="function">{##FUNCTION##}</p>
   <p class="bio">{##BIO##}</p>
 </article>

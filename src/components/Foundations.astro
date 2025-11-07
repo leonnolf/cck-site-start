@@ -1,5 +1,5 @@
 ---
-
+import FoundationsCard from "./FoundationsCard.astro";
 ---
 
 <section class="container" id="foundations">
@@ -11,7 +11,20 @@
     </p>
   </header>
   <ul>
-    <li>##FOUNDATION##</li>
+    <!-- {
+      allFoundations.map((f) => (
+        <li>
+        {
+          f.data.title
+        }</li>
+        <li>
+          {
+            f.data.description
+          }
+        </li>
+      ))
+    } -->
+    <FoundationsCard />
   </ul>
 </section>
 

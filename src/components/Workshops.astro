@@ -1,6 +1,5 @@
 ---
-/* check WorkshopCard.astro to get an idea of how to use these themes */
-const themes = ["grey", "green", "black"];
+
 ---
 
 <section class="container" id="workshops">
@@ -22,5 +21,15 @@ const themes = ["grey", "green", "black"];
     display: flex;
     flex-flow: column;
     gap: var(--sp-m);
+  }
+
+  li:nth-child(3n + 1) {
+    --card-theme: grey;
+  }
+  li:nth-child(3n + 2) {
+    --card-theme: green;
+  }
+  li:nth-child(3n + 3) {
+    --card-theme: black;
   }
 </style>

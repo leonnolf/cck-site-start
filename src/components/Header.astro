@@ -1,5 +1,5 @@
 ---
-
+import Menu from "./Menu.astro";
 ---
 
 <svg style="display:none">
@@ -94,7 +94,6 @@
 
   .nav {
     display: grid;
-    grid-template-columns: min-content auto;
     width: 100%;
   }
 
@@ -144,7 +143,13 @@
     background-color: var(--color-primary);
   }
 
-  @media screen and (min-width: 45em) {
+  @media screen and (min-width: 750px) {
+    .nav {
+      grid-template-columns: min-content auto;
+      align-items: center;
+      gap: var(--sp-m);
+    }
+
     .nav__title {
       grid-row: 1;
       grid-column: 1;
