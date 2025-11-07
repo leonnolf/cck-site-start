@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 
 
 export default defineConfig({
-    site: 'https://github.com/leonnolf/cck-site-start.git',
+    site: 'https://cck.leonnolf.github.io',
     base: '/my-repo',
 });
